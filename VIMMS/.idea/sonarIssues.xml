@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="$USER_HOME$/git/CDKOnWheels/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/git/CDKOnWheels/service/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/git/CDKOnWheels/service/src/main/java/com/cdk/dmg/services/inventory/controller/VehicleController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/git/CDKOnWheels/service/src/main/java/com/cdk/dmg/services/inventory/service/VehicleService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/git/CDKOnWheels/service/src/main/resources/application.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/gitnew/cdkonwheels/src/main/java/com/cdk/cdkonwheels/controller/OfferController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/gitnew/cdkonwheels/src/main/java/com/cdk/cdkonwheels/controller/TransactionController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/gitnew/cdkonwheels/src/main/java/com/cdk/cdkonwheels/controller/VehicleController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/gitnew/cdkonwheels/src/main/java/com/cdk/cdkonwheels/enums/PurchaseType.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/gitnew/cdkonwheels/src/main/java/com/cdk/cdkonwheels/model/Offer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/gitnew/cdkonwheels/src/main/java/com/cdk/cdkonwheels/model/Transaction.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/gitnew/cdkonwheels/src/resources/application.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/gitnew/cdkonwheels/src/resources/static/js/transaction.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/gitnew/cdkonwheels/src/resources/static/js/vehicle-uber.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/gitnew/cdkonwheels/src/resources/static/transaction.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/gitnew/cdkonwheels/src/resources/static/vehicles-zoomcar.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

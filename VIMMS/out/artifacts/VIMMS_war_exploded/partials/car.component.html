@@ -1,0 +1,67 @@
+<div class = 'carForm'>
+    <form name="carForm" #carForm="ngForm">
+    <div *ngIf="successMessage" [ngClass] = "'success'"> {{car.make}} {{car.model}} Added. </div>
+    <div *ngIf="errorMessage" [ngClass] = "'error'"> {{errorMessage}} </div>
+    <h1>{{title}}</h1>
+    <div class="form-group">
+        <label for="title">Make</label>
+        <input type="text" class="form-control" id="title" required minlength="3" maxlength="20" [(ngModel)]="car.make" name="make" #make="ngModel">
+        <div *ngIf="make.errors && (make.dirty || make.touched)" class="alert alert-danger">
+            <div [hidden]="!make.errors.required">
+                Car make is required!
+            </div>
+            <div [hidden]="!make.errors.minlength">
+                Make must be at least 3 characters long.
+            </div>
+            <div [hidden]="!make.errors.maxlength">
+                Make cannot be more than 20 characters long.
+            </div>
+        </div>
+    </div>
+
+        <div class="form-group">
+            <label for="model">Model</label>
+            <input type="text" class="form-control" id="model" required minlength="1" maxlength="20" [(ngModel)]="car.model" name="model" #model="ngModel">
+            <div *ngIf="model.errors && (model.dirty || model.touched)" class="alert alert-danger">
+                <div [hidden]="!model.errors.required">
+                    Car model is required!
+                </div>
+                <div [hidden]="!model.errors.minlength">
+                    Make must be at least 1 characters long.
+                </div>
+                <div [hidden]="!model.errors.maxlength">
+                    Make cannot be more than 20 characters long.
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="year">Year of Manufacture</label>
+            <input type="number" class="form-control" id="year" required minlength="1990" maxlength="2000" [(ngModel)] = "car.year" name = "year" #year="ngModel">
+            <div *ngIf="year.errors && (year.dirty || year.touched)" class="alert alert-danger">
+                <div [hidden]="!year.errors.required">
+                    Year of Manufacture is required!
+                </div>
+                <div [hidden]="!year.errors.minlength">
+                    Year of Manufacture is required!
+                </div>
+                <div [hidden]="!year.errors.maxlength">
+                    Year of Manufacture is required!
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="trim">Trim</label>
+            <input type="text" class="form-control" id = "trim" maxlength="20" [(ngModel)]="car.trim" name="trim" #trim="ngModel">
+            <div *ngIf="trim.errors && (trim.dirty || trim.touched)" class="alert alert-danger">
+                <div [hidden]="!trim.errors.maxlength">
+                    Trim cannot be more than 20 characters long.
+                </div>
+            </div>
+        </div>
+
+     <input type='button' value='Add' (click)='addCar();' [disabled]="!carForm.form.valid" />
+
+    </form>
+</div>

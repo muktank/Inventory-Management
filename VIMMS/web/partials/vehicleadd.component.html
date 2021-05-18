@@ -1,0 +1,283 @@
+<div class="vehicle">
+    <form name="vehicleform" #vehicleform="ngForm">
+
+        <div class="row">
+            <div class="col-sm-3"></div>
+
+            <div class="col-sm-6">
+                <div class="dropDown"><br>
+                    <h2>Add Vehicle in Inventory</h2>
+
+
+                    <h3>Make</h3><select name="selectedMake" [(ngModel)]="selectedMake" required name="make1"
+                                         #make1="ngModel" (ngModelChange)="onChangeMake($event);">
+                        <option *ngFor="let make of makes" value={{make}}>
+                            {{make}}
+                        </option>
+
+                    </select> <br>
+                    <div *ngIf="make1.errors && (make1.dirty || make1.touched)" class="alert alert-danger">
+                        <div [hidden]="!make1.errors.required">
+                            Make is required!
+                        </div>
+                    </div>
+
+                    <h3>Model</h3><select name="selectedModel" [(ngModel)]="selectedModel" required name="model1"
+                                          #model1="ngModel" (ngModelChange)="onChangeModel($event)">
+                        <option *ngFor="let model of models" value={{model}}>
+                            {{model}}
+                        </option>
+                    </select> <br>
+                    <div *ngIf="model1.errors && (model1.dirty || model1.touched)" class="alert alert-danger">
+                        <div [hidden]="!model1.errors.required">
+                            Model name is required!
+                        </div>
+                    </div>
+
+                    <h3>Year</h3><select name="selectedYear" [(ngModel)]="selectedYear" required name="year1"
+                                         #year1="ngModel" (ngModelChange)="onChangeYear($event)">
+                        <option *ngFor="let year of years" value={{year}}>
+                            {{year}}
+                        </option>
+                    </select> <br>
+                    <div *ngIf="year1.errors && (year1.dirty || year1.touched)" class="alert alert-danger">
+                        <div [hidden]="!year1.errors.required">
+                            Year is required!
+                        </div>
+                    </div>
+
+                    <h3>Trim</h3><select name="selectedTrim" [(ngModel)]="selectedTrim" required name="trim1"
+                                         #trim1="ngModel" (ngModelChange)="onChangeTrim($event)">
+                        <option *ngFor="let trim of trims" value={{trim}}>
+                            {{trim}}
+                        </option>
+                    </select> <br>
+                    <div *ngIf="trim1.errors && (trim1.dirty || trim1.touched)" class="alert alert-danger">
+                        <div [hidden]="!trim1.errors.required">
+                            Trim is required!
+                        </div>
+                    </div>
+
+                    <h3>Fuel</h3><select name="selectedFuel" [(ngModel)]="selectedFuel" required name="fuel1"
+                                         #fuel1="ngModel" (ngModelChange)="onChangeFuel($event)">
+                        <option *ngFor="let fuel of fuels" value={{fuel}}>
+                            {{fuel}}
+                        </option>
+                    </select> <br>
+                    <div *ngIf="fuel1.errors && (fuel1.dirty || fuel1.touched)" class="alert alert-danger">
+                        <div [hidden]="!fuel1.errors.required">
+                            Fuel Type is required!
+                        </div>
+                    </div>
+                    <!--<h3>Cylinders</h3>-->
+                    <!--<input type="number" name="cylinders" required [(ngModel)] = "cylinder">-->
+                    <!---->
+
+                    <div>
+                        <label for="cylinder"><h3>Cylinder</h3></label><br>
+                        <input type="number" id="cylinder" required [(ngModel)]="cylinder" name="cyl"
+                               #cyl="ngModel">
+                        <div *ngIf="cyl.errors && (cyl.dirty || cyl.touched)" class="alert alert-danger">
+                            <div [hidden]="!cyl.errors.required">
+                                Number of Cylinder is required!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="engine"><h3>Engine</h3></label><br>
+                        <input type="text" id="engine" required [(ngModel)]="engine" name="engine1"
+                               #engine1="ngModel">
+                        <div *ngIf="engine1.errors && (engine1.dirty || engine1.touched)"
+                             class="alert alert-danger">
+                            <div [hidden]="!engine1.errors.required">
+                                Car engine is required!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="exterior"><h3>Exterior</h3></label><br>
+                        <input type="text" id="exterior" required [(ngModel)]="exterior" name="ext" #ext="ngModel">
+                        <div *ngIf="ext.errors && (ext.dirty || ext.touched)" class="alert alert-danger">
+                            <div [hidden]="!ext.errors.required">
+                                Exterior is required!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="hp"><h3>HorsePower</h3></label><br>
+                        <input type="text" id="hp" required [(ngModel)]="horsePower" name="hp" #hp="ngModel">
+                        <div *ngIf="hp.errors && (hp.dirty || hp.touched)" class="alert alert-danger">
+                            <div [hidden]="!hp.errors.required">
+                                HorsePower is required!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="trans"><h3>Transmission</h3></label><br>
+                        <input type="text" id="trans" required [(ngModel)]="transmission" name="trans"
+                               #trans="ngModel">
+                        <div *ngIf="trans.errors && (trans.dirty || trans.touched)" class="alert alert-danger">
+                            <div [hidden]="!trans.errors.required">
+                                Transmission is required!
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <label for="img"><h3>Image</h3></label><br>
+                        <input type="text" id="img" required [(ngModel)]="image" name="img" #img="ngModel">
+                        <div *ngIf="img.errors && (img.dirty || img.touched)" class="alert alert-danger">
+                            <div [hidden]="!img.errors.required">
+                                Image is required!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="pc"><h3>Capacity</h3></label><br>
+                        <input type="text" id="pc" required [(ngModel)]="capacity" name="pc" #pc="ngModel">
+                        <div *ngIf="pc.errors && (pc.dirty || pc.touched)" class="alert alert-danger">
+                            <div [hidden]="!pc.errors.required">
+                                Passenger capacity is required!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="pr"><h3>Price</h3></label><br>
+                        <input type="number" id="pr" required [(ngModel)]="price" name="pr" #pr="ngModel">
+                        <div *ngIf="pr.errors && (pr.dirty || pr.touched)" class="alert alert-danger">
+                            <div [hidden]="!pr.errors.required">
+                                price is required!
+                            </div>
+                        </div>
+                    </div><br><br>
+
+                    <input type="button" value="Add" (click)="addVehicle();" [disabled]="!vehicleform.form.valid"/>
+                    <input type="button" value="Clear" (click)="clear();"><br><br>
+
+
+
+                </div>
+            </div>
+
+            <div class="col-sm-3"></div>
+        </div>
+    </form>
+</div>
+
+<!--<div class = 'vehicleForm'>-->
+<!--<form name="vehicleForm" #vehicleForm="ngForm">-->
+<!--<div *ngIf="successMessage" [ngClass] = "'success'"> {{car.make}} {{car.model}} Added. </div>-->
+<!--<div *ngIf="errorMessage" [ngClass] = "'error'"> {{errorMessage}} </div>-->
+<!--<div >-->
+<!--<select>-->
+<!--<input type= "text" class="form-control" id="text" name="text">-->
+<!--<h2 class="h2">M</h2><option *ngFor="let make of makes" value={{make}}>-->
+<!--<b>{{make}}</b>-->
+<!--</option>-->
+<!--</select> <br>-->
+<!--</div>-->
+
+<!--<h1>HTML</h1>-->
+<!--<div>-->
+<!--<select name="selectedModel" [(ngModel)]="selectedModel">-->
+<!--<option *ngFor="let model of models" value={{model}}>-->
+<!--<b>{{model}}</b>-->
+<!--</option>-->
+<!--</select> <br>-->
+<!--</div>-->
+
+<!--<div>-->
+<!--<h1>TRIM</h1>-->
+<!--<select name="selectedTrim" [(ngModel)]="selectedTrim">-->
+<!--<option *ngFor="let trim of trims" value={{trim}}>-->
+<!--<b>{{trim}}</b>-->
+<!--</option>-->
+<!--</select> <br>-->
+<!--</div>-->
+
+<!--<h2  text align="center"> DES.ID</h2>-->
+<!--<input type  = "number"  type align="center" class="form-control" id="DescriptionID" name="DescriptionID">-->
+
+<!--<h2 text align="centre"> Cylinders</h2>-->
+<!--<input type= "number"  type align="center" class="form-control" id="Cylinders" name="Cylinders">-->
+
+<!--<div class="form-group">-->
+<!--<label for="engine"><h1>Engine</h1></label>-->
+<!--<input type="text" class="form-control" id="engine" required minlength="3" maxlength="20" [(ngModel)]="vehicleForm.engine" name="engine" #engine="ngModel">-->
+<!--<div *ngIf="engine.errors && (engine.dirty || engine.touched)" class="alert alert-danger">-->
+<!--<div [hidden]="!engine.errors.required">-->
+<!--Car engine is required!-->
+<!--</div>-->
+<!--<div [hidden]="!engine.errors.minlength">-->
+<!--car engine at least 3 characters long.-->
+<!--</div>-->
+<!--<div [hidden]="!engine.errors.maxlength">-->
+<!--car engine cannot be more than 20 characters long.-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<div class="form-group" align="center">-->
+<!--<label for="exterior"><h1>Exterior</h1></label>-->
+<!--<input type="text" class="form-control" id="exterior" required minlength="3" maxlength="20" [(ngModel)]="vehicleForm.exterior" name="exterior" #exterior="ngModel">-->
+<!--<div *ngIf="exterior.errors && (exterior.dirty || exterior.touched)" class="alert alert-danger">-->
+<!--<div [hidden]="!exterior.errors.required">-->
+<!--Car exterior is required!-->
+<!--</div>-->
+<!--<div [hidden]="!exterior.errors.minlength">-->
+<!--Car exterior at least 3 characters long.-->
+<!--</div>-->
+<!--<div [hidden]="!exterior.errors.maxlength">-->
+<!--Car exterior cannot be more than 20 characters long.-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<div class="form-group">-->
+<!--<label for="exterior"><h1>HorseP.</h1></label>-->
+<!--<input type="text" class="form-control" id="horsepower" required minlength="3" maxlength="20" [(ngModel)]="vehicleForm.horsepower" name="horsepower" #horsepower="ngModel">-->
+<!--<div *ngIf="horsepower.errors && (horsepower.dirty || horsepower.touched)" class="alert alert-danger">-->
+<!--<div [hidden]="!horsepower.errors.required">-->
+<!--Car horsepower is required!-->
+<!--</div>-->
+<!--<div [hidden]="!horsepower.errors.minlength">-->
+<!--Car horsepower at least 3 characters long.-->
+<!--</div>-->
+<!--<div [hidden]="!horsepower.errors.maxlength">-->
+<!--Car horsepower cannot be more than 20 characters long.-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+
+<!--<h2> Cap</h2>-->
+<!--<input type= "number"  type align="center" class="form-control" id="PassengerCapacity" name="PassengerCapacity">-->
+
+<!--<div class="form-group">-->
+<!--<label for="exterior"><h1>Trans.</h1></label>-->
+<!--<input type="text" class="form-control" id="transmission" required minlength="3" maxlength="20" [(ngModel)]="vehicleForm.transmission" name="transmission" #transmission="ngModel">-->
+<!--<div *ngIf="transmission.errors && (transmission.dirty || transmission.touched)" class="alert alert-danger">-->
+<!--<div [hidden]="!transmission.errors.required">-->
+<!--Car transmission is required!-->
+<!--</div>-->
+<!--<div [hidden]="!transmission.errors.minlength">-->
+<!--Car transmission at least 3 characters long.-->
+<!--</div>-->
+<!--<div [hidden]="!transmission.errors.maxlength">-->
+<!--Car transmission cannot be more than 20 characters long.-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash;<br><br>&ndash;&gt;-->
+<!--&lt;!&ndash;<input type='button' value='Add' (click)='addCar();' [disabled]="!vehicleForm.form.valid" />&ndash;&gt;-->
+
+<!--</form>-->
+<!--</div>-->

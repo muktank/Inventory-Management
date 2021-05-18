@@ -1,0 +1,107 @@
+<div class="vehicle">
+<div class="vehicleForm">
+    <div class="row">
+        <div>
+            <input type="button" align="center" value="Add Vehicle" (click)="addVehicle();">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <div class="dropDown">
+                <h2>Sort by</h2>
+                <select name="selectedOption" [(ngModel)]="selectedOption" (ngModelChange)="onChangeOption($event);">
+                    <option><h4>VIN</h4></option>
+                    <option><h4>Make</h4></option>
+                    <option><h4>Model</h4></option>
+                    <option><h4>Year</h4></option>
+                    <option><h4>Trim</h4></option>
+                    <option><h4>Fuel</h4></option>
+                    <option><h4>Price</h4></option>
+                </select><br><br><br>
+                <h2>Search Vehicle</h2>
+                <h3 class="h3">Make</h3>
+                <select name="selectedMake" [(ngModel)]="selectedMake" (ngModelChange)="onChangeMake($event);">
+                    <option *ngFor="let make of makes" value={{make}}>
+                        <b>{{make}}</b>
+                    </option>
+                </select> <br>
+
+                <h3 class="h3">Model</h3>
+                <select name="selectedModel" [(ngModel)]="selectedModel" (ngModelChange)="onChangeModel($event)">
+                    <option *ngFor="let model of models" value={{model}}>
+                        {{model}}
+                    </option>
+                </select> <br>
+
+
+                <h3 class="h3">Year</h3>
+                <select name="selectedYear" [(ngModel)]="selectedYear" (ngModelChange)="onChangeYear($event)">
+                    <option *ngFor="let year of years" value={{year}}>
+                        {{year}}
+                    </option>
+                </select> <br>
+
+
+                <h3 class="h3">Trim</h3>
+                <select name="selectedTrim" [(ngModel)]="selectedTrim" (ngModelChange)="onChangeTrim($event)">
+                    <option *ngFor="let trim of trims" value={{trim}}>
+                        {{trim}}
+                    </option>
+                </select> <br>
+
+
+                <h3 class="h3">Fuel</h3>
+                <select name="selectedFuel" [(ngModel)]="selectedFuel" (ngModelChange)="onChangeFuel($event)">
+                    <option *ngFor="let fuel of fuels" value={{fuel}}>
+                        {{fuel}}
+                    </option>
+                </select> <br><br><br>
+
+                <input type="button" value="Clear" (click)="clear();">
+            </div>
+        </div>
+
+        <div class="col-sm-10">
+            <div class="forTable">
+                <table class="table">
+                    <thead>
+                    </thead>
+                    <tbody *ngFor="let vehicle of vehicles">
+                    <td><img width="300" height="300" [src]="imageUrl+vehicle.image.imageName"></td>
+                    <td class="forColumn">
+                        <tr><h4>VIN :</h4></tr>
+                        <tr><h4>Make :</h4></tr>
+                        <tr><h4>Model :</h4></tr>
+                        <tr><h4>Year :</h4></tr>
+                        <tr><h4>Trim :</h4></tr>
+                        <tr><h4>Fuel :</h4></tr>
+                        <tr><h4>Cylinders :</h4></tr>
+                        <tr><h4>Engine :</h4></tr>
+                        <tr><h4>Exterior :</h4></tr>
+                        <tr><h4>HorsePower :</h4></tr>
+                        <tr><h4>Transmission :</h4></tr>
+                        <tr><h4>PassengerCapacity :</h4></tr>
+                    </td>
+                    <td >
+                        <tr><h4>{{vehicle.vin}}</h4></tr>
+                        <tr><h4>{{vehicle.make.makeName}}</h4></tr>
+                        <tr><h4>{{vehicle.model.modelName}}</h4></tr>
+                        <tr><h4>{{vehicle.model.year}}</h4></tr>
+                        <tr><h4>{{vehicle.trim.trimName}}</h4></tr>
+                        <tr><h4>{{vehicle.fuel.fuelType}}</h4></tr>
+                        <tr><h4>{{vehicle.description.cylinders}}</h4></tr>
+                        <tr><h4>{{vehicle.description.engine}}</h4></tr>
+                        <tr><h4>{{vehicle.description.exterior}}</h4></tr>
+                        <tr><h4>{{vehicle.description.horsepower}}</h4></tr>
+                        <tr><h4>{{vehicle.description.transmission}}</h4></tr>
+                        <tr><h4>{{vehicle.description.passengerCapacity}}</h4></tr>
+                    </td>
+                    <td><h2>Price : {{vehicle.price}}</h2></td>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>

@@ -1,0 +1,118 @@
+@import "common.css";
+
+.vehicle {
+    margin: auto;
+    margin-left: 10px;
+    margin-right: 40px;
+}
+
+.vehicle select{
+    border-radius: 30px;
+    width: 45%;
+    height: 30px;
+    background-color: white;
+    font-size: 15px;
+    text-align: center;
+    align-content: center;
+    margin-left: 200px;
+    border-width: thin;
+    border-color: black;
+}
+
+.vehicle input[type="text"]{
+    border-radius: 30px;
+    width: 45%;
+    height: 30px;
+    background-color: white;
+    font-size: 15px;
+    text-align: center;
+    margin-left: 200px;
+    border-width: thin;
+    border-color: black;
+}
+
+.vehicle input[type="number"]{
+    border-radius: 30px;
+    width: 45%;
+    height: 30px;
+    background-color: white;
+    font-size: 15px;
+    text-align: center;
+    align-content: center;
+    margin-left: 200px;
+    border-width: thin;
+    border-color: black;
+}
+
+.vehicle input[type="button"]{
+    background-color: #5cb85c;
+    border-radius: 30px;
+    border-width: thin;
+    border-color: #5cb85c;
+    width: 120px;
+    height: 30px;
+    font-size: 15px;
+    margin-left: 150px;
+}
+
+.vehicle label{
+    margin-left: 300px;
+}
+
+.dropDown {
+    background-color: gainsboro;
+    align-content: center;
+    margin-left: 20px;
+    border-color: black;
+    border-width: medium;
+}
+
+.dropDown option{
+    font-size: 15px;
+    text-decoration-color: #0f0f0f;
+}
+
+
+.dropDown h3{
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.forTable{
+    overflow-y: auto;
+    height: 80%;
+}
+
+.forTable tr{
+    text-align: left;
+}
+
+
+
+.header{
+    background-color: #5cb85c;
+    background-size: 100px;
+    height: 150px;
+    position: static;
+}
+
+
+
+.success {
+    color: green;
+}
+.error {
+    color: greenyellow;
+}
+
+.vehicle .form-group{
+    border:10px inset rgba(50,50,60,0.8);
+    width: 50%;
+    text-align:center;
+    align: center;
+    margin: auto;
+    margin-left: 350px;
+    background-color:greenyellow ;
+}
+
+

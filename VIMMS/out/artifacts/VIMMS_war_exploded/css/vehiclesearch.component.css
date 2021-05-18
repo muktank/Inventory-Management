@@ -1,0 +1,67 @@
+.vehicle {
+    margin: auto;
+    margin-left: 10px;
+    margin-right: 40px;
+}
+
+.vehicle select{
+    border-radius: 30px;
+    width: 120px;
+    height: 30px;
+    background-color: white;
+    font-size: 15px;
+    text-align: center;
+    margin-left: 40px;
+}
+
+.vehicle h2{
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: #5cb85c;
+}
+
+.vehicle h3{
+    text-align: center;
+}
+
+
+.dropDown {
+    background-color: gainsboro;
+    position: relative;
+}
+
+.dropDown option{
+    font-size: 15px;
+    text-decoration-color: #0f0f0f;
+}
+
+.vehicle input[type="button"]{
+    background-color: #5cb85c;
+    border-radius: 30px;
+    width: 120px;
+    height: 30px;
+    font-size: 15px;
+    margin-left: 40px;
+}
+
+.dropDown h3{
+    font-size: 20px;
+}
+
+.forTable{
+    overflow-y: auto;
+    height: 80%;
+}
+
+.forTable tr{
+    text-align: left;
+}
+
+
+
+.header{
+    background-color: #5cb85c;
+    background-size: 100px;
+    height: 150px;
+    position: static;
+}
